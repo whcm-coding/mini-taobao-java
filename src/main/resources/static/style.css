@@ -1,0 +1,11 @@
+.container {
+  padding: 12px 9px;
+  width: 220px;
+  background: #fff;
+  border: 1px solid #fff;
+  display: inline-block;
+}
+.img {
+  width: 220px;
+  height: 220px;
+}

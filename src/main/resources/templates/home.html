@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>武汉传媒学院欢迎你！</title>
-  </head>
-  <body>
-    <div th:text="${name}"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>武汉传媒学院欢迎你！</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<div class="container" th:each="item : ${itemList}">
+  <img class="img" th:src="${item.img}">
+  <div th:text="${item.price}"></div>
+  <div th:text="${item.title}"></div>
+  <div th:text="${item.desc}"></div>
+  <div>
+    库存
+    <span th:text="${item.count}"></span>
+  </div>
+  <button>添加到购物车</button>
+</div>
+</body>
+
 </html>
