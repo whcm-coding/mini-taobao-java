@@ -20,4 +20,8 @@ public class Item {
     this.title = title;
     this.desc = desc;
   }
+
+  public Item clone() {
+    return new Item(this.id, this.price, this.count, this.title, this.desc, this.img);
+  }
 }

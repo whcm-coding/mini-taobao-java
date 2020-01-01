@@ -14,6 +14,15 @@ public class ItemList {
     return 0;
   }
 
+  public static Item get(int id) {
+    for (Item item : ItemList.items) {
+      if (item.id == id) {
+        return item;
+      }
+    }
+    return null;
+  }
+
   public static List<Item> all() {
     return ItemList.items;
   }
